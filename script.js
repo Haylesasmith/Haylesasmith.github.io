@@ -19,7 +19,7 @@ const artworks = [
         status: 'Available'
     },
     {
-        image: 'painting1.jpg',
+        image: 'painting2.PNG',
         title: 'Series 02',
         year: 2024,
         medium: 'Acrylic on paper',
