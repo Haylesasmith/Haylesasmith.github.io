@@ -4,15 +4,15 @@
 
    :root {
     /* COLOURS */
-    --primary-bg: #ffffff;
-    --secondary-bg: #f8f8f8;
+    --primary-bg: #e8e8e8;
+    --secondary-bg: #d4d4d4;
     --primary-text: #1a1a1a;
     --secondary-text: #666666;
     --accent-color: #000000;
     
     /* FONTS */
-    --font-heading: 'Georgia', 'Times New Roman', serif;
-    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Inter', sans-serif;
     
     /* SIZES */
     --size-h1: 3.5rem;
@@ -34,10 +34,11 @@
    END OF CUSTOMIZATION SECTION
    ============================================ */
 
-* {
+   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-body) !important;
 }
 
 html {
@@ -49,12 +50,15 @@ body {
     color: var(--primary-text);
     background-color: var(--primary-bg);
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
     padding: 0 var(--spacing-medium);
+    width: 100%;
+    overflow-x: hidden;
 }
 
 h1, h2, h3 {
@@ -83,6 +87,12 @@ p {
     margin-bottom: var(--spacing-medium);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* NAVIGATION */
 .navbar {
     position: sticky;
@@ -103,10 +113,23 @@ p {
 }
 
 .logo {
-    font-size: 1.25rem;
-    font-family: var(--font-heading);
-    font-weight: normal;
-    letter-spacing: 0.05em;
+    display: block;
+    height: 100px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.hero-logo {
+    max-width: 500px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto var(--spacing-medium);
+    display: block;
 }
 
 .nav-menu {
@@ -178,18 +201,39 @@ p {
 
 .gallery-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: 1fr;
     gap: var(--gallery-gap);
     margin-top: var(--spacing-large);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.gallery-item {
+    width: 100%;
+    overflow: hidden;
 }
 
 .gallery-item-image {
     width: 100%;
-    height: 350px;
+    height: auto;
     object-fit: cover;
     display: block;
     border-radius: var(--image-radius);
     transition: opacity 0.3s ease;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 .gallery-item:hover {
@@ -346,11 +390,14 @@ p {
 }
 
 .lightbox-image {
-    max-width: 90%;
-    max-height: 80vh;
+    max-width: 85vw;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
     object-fit: contain;
     margin-bottom: var(--spacing-large);
     border-radius: var(--image-radius);
+    display: block;
 }
 
 .lightbox-info {
@@ -429,13 +476,21 @@ p {
     }
 
     .nav-container {
-        flex-direction: column;
-        gap: var(--spacing-small);
+        max-width: var(--max-width);
+        margin: 0 auto;
+        padding: 0 var(--spacing-medium);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 2rem;
     }
-
+    
     .nav-menu {
-        gap: 1rem;
-        font-size: 0.9rem;
+        display: flex;
+        list-style: none;
+        gap: 2.5rem;
+        white-space: nowrap;
     }
 
     .gallery-grid {
