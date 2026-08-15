@@ -19,32 +19,32 @@ const artworks = [
         status: 'Available'
     },
     {
-        image: 'painting2.PNG',
+        image: 'painting2.jpg',
         title: 'Series 02',
         year: 2024,
         medium: 'Acrylic on paper',
         dimensions: '80 × 60 cm',
         description: 'Part of an ongoing series investigating texture and layering.',
         status: 'Sold'
-    },
-    {
-        image: 'painting1.jpg',
-        title: 'Composition in Grey',
-        year: 2023,
-        medium: 'Mixed media',
-        dimensions: '100 × 100 cm',
-        description: 'An exploration of monochromatic palettes and geometric abstraction.',
-        status: 'Available'
-    },
-    {
-        image: 'painting1.jpg',
-        title: 'Untitled #4',
-        year: 2023,
-        medium: 'Oil on linen',
-        dimensions: '150 × 120 cm',
-        description: 'Working with translucency and light within a constrained colour palette.',
-        status: 'Available'
     }
+    // ,{
+    //     image: 'painting1.jpg',
+    //     title: 'Composition in Grey',
+    //     year: 2023,
+    //     medium: 'Mixed media',
+    //     dimensions: '100 × 100 cm',
+    //     description: 'An exploration of monochromatic palettes and geometric abstraction.',
+    //     status: 'Available'
+    // },
+    // {
+    //     image: 'painting1.jpg',
+    //     title: 'Untitled #4',
+    //     year: 2023,
+    //     medium: 'Oil on linen',
+    //     dimensions: '150 × 120 cm',
+    //     description: 'Working with translucency and light within a constrained colour palette.',
+    //     status: 'Available'
+    // }
 ];
 
 // Initialize gallery when page loads
