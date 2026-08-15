@@ -1,0 +1,447 @@
+/* ============================================
+   EDIT WEBSITE COLOURS, FONTS, AND SIZES HERE
+   ============================================ */
+
+   :root {
+    /* COLOURS */
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8f8f8;
+    --primary-text: #1a1a1a;
+    --secondary-text: #666666;
+    --accent-color: #000000;
+    
+    /* FONTS */
+    --font-heading: 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    /* SIZES */
+    --size-h1: 3.5rem;
+    --size-h2: 2.5rem;
+    --size-h3: 1.5rem;
+    --size-body: 1rem;
+    --size-small: 0.875rem;
+    
+    /* LAYOUT */
+    --max-width: 1200px;
+    --gallery-gap: 2rem;
+    --image-radius: 0px;
+    --spacing-large: 4rem;
+    --spacing-medium: 2rem;
+    --spacing-small: 1rem;
+}
+
+/* ============================================
+   END OF CUSTOMIZATION SECTION
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--primary-text);
+    background-color: var(--primary-bg);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+}
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+h1 {
+    font-size: var(--size-h1);
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: var(--size-h2);
+    margin-bottom: var(--spacing-medium);
+}
+
+h3 {
+    font-size: var(--size-h3);
+}
+
+p {
+    font-size: var(--size-body);
+    color: var(--secondary-text);
+    margin-bottom: var(--spacing-medium);
+}
+
+/* NAVIGATION */
+.navbar {
+    position: sticky;
+    top: 0;
+    background-color: var(--primary-bg);
+    border-bottom: 1px solid #e0e0e0;
+    z-index: 100;
+    padding: var(--spacing-small) 0;
+}
+
+.nav-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 var(--spacing-medium);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.25rem;
+    font-family: var(--font-heading);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2.5rem;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--primary-text);
+    font-size: var(--size-body);
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+}
+
+.nav-menu a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--accent-color);
+    transition: width 0.3s ease;
+}
+
+.nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--primary-bg);
+    padding: var(--spacing-large) var(--spacing-medium);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: var(--size-h1);
+    margin-bottom: var(--spacing-medium);
+    letter-spacing: 0.1em;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-text);
+    font-weight: 300;
+    letter-spacing: 0.05em;
+}
+
+/* GALLERY SECTION */
+.gallery-section {
+    padding: var(--spacing-large) var(--spacing-medium);
+    background-color: var(--primary-bg);
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--gallery-gap);
+    margin-top: var(--spacing-large);
+}
+
+.gallery-item {
+    cursor: pointer;
+    overflow: hidden;
+    background-color: var(--secondary-bg);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-8px);
+}
+
+.gallery-item-image {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    display: block;
+    border-radius: var(--image-radius);
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-item-image {
+    opacity: 0.9;
+}
+
+.gallery-item-info {
+    padding: var(--spacing-medium);
+    background-color: var(--primary-bg);
+}
+
+.gallery-item-title {
+    font-size: var(--size-h3);
+    margin-bottom: 0.5rem;
+    font-family: var(--font-heading);
+    font-weight: normal;
+}
+
+.gallery-item-meta {
+    font-size: var(--size-small);
+    color: var(--secondary-text);
+    line-height: 1.8;
+}
+
+.gallery-item-status {
+    font-size: var(--size-small);
+    font-weight: 600;
+    margin-top: 0.5rem;
+    color: var(--accent-color);
+}
+
+.status-sold {
+    color: #999;
+}
+
+.status-available {
+    color: var(--accent-color);
+}
+
+/* ABOUT SECTION */
+.about-section {
+    padding: var(--spacing-large) var(--spacing-medium);
+    background-color: var(--secondary-bg);
+}
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-large);
+    align-items: center;
+}
+
+.about-text {
+    max-width: 600px;
+}
+
+.about-image {
+    overflow: hidden;
+    border-radius: var(--image-radius);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* CONTACT SECTION */
+.contact-section {
+    padding: var(--spacing-large) var(--spacing-medium);
+    background-color: var(--primary-bg);
+    text-align: center;
+}
+
+.contact-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-content p {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-large);
+}
+
+.contact-links {
+    display: flex;
+    gap: var(--spacing-medium);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-block;
+    padding: 0.75rem 2rem;
+    border: 2px solid var(--accent-color);
+    color: var(--accent-color);
+    text-decoration: none;
+    font-size: var(--size-body);
+    transition: all 0.3s ease;
+}
+
+.contact-link:hover {
+    background-color: var(--accent-color);
+    color: var(--primary-bg);
+}
+
+/* FOOTER */
+.footer {
+    background-color: var(--secondary-bg);
+    padding: var(--spacing-medium);
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    font-size: var(--size-small);
+    color: var(--secondary-text);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.95);
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.lightbox.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-medium);
+}
+
+.lightbox-image {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    margin-bottom: var(--spacing-large);
+    border-radius: var(--image-radius);
+}
+
+.lightbox-info {
+    color: white;
+    text-align: center;
+    max-width: 600px;
+}
+
+.lightbox-info p {
+    color: #ccc;
+    margin-bottom: 0.5rem;
+}
+
+.close {
+    position: absolute;
+    top: 30px;
+    right: 45px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #bbb;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+    :root {
+        --size-h1: 2.5rem;
+        --size-h2: 1.8rem;
+        --size-h3: 1.25rem;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+    }
+
+    .hero {
+        min-height: 50vh;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-medium);
+    }
+
+    .contact-links {
+        gap: 1rem;
+    }
+
+    .lightbox-image {
+        max-width: 95%;
+        max-height: 70vh;
+    }
+
+    .close {
+        top: 20px;
+        right: 20px;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --size-h1: 1.8rem;
+        --size-h2: 1.4rem;
+        --spacing-large: 2rem;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        gap: var(--spacing-small);
+    }
+
+    .nav-menu {
+        gap: 1rem;
+        font-size: 0.9rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .gallery-item-image {
+        height: 250px;
+    }
+}
