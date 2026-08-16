@@ -374,6 +374,7 @@ img {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.95);
     animation: fadeIn 0.3s ease;
+    overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -382,22 +383,29 @@ img {
 }
 
 .lightbox.active {
+    display: block;
+    padding: var(--spacing-medium);
+}
+
+.lightbox-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: var(--spacing-medium);
+    min-height: 100vh;
+    padding: 80px 20px 40px;
+    text-align: center;
 }
 
 .lightbox-image {
-    max-width: 85vw;
-    max-height: 85vh;
+    max-width: 45%;
+    max-height: 80%;
     width: auto;
     height: auto;
     object-fit: contain;
     margin-bottom: var(--spacing-large);
-    border-radius: var(--image-radius);
     display: block;
+    border-radius: var(--image-radius);
 }
 
 .lightbox-info {

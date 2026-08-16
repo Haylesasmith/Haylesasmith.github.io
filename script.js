@@ -11,19 +11,58 @@
 const artworks = [
     {
         image: 'painting1.jpg',
-        title: 'Untitled Study #1',
-        year: 2024,
-        medium: 'Oil on canvas',
-        dimensions: '120 × 150 cm',
+        title: 'Dallas Road',
+        year: 2025,
+        medium: 'Oil on board',
+        dimensions: '9 × 11 inch',
         description: 'A meditation on colour and form exploring the relationship between positive and negative space.',
         status: 'Available'
     },
     {
         image: 'painting2.jpg',
-        title: 'Series 02',
+        title: 'View from the Ferry',
+        year: 2025,
+        medium: 'Oil on panel',
+        dimensions: '6 × 8 inch',
+        description: 'Part of an ongoing series investigating texture and layering.',
+        status: 'Sold'
+    },
+
+    {
+        image: 'painting3.jpg',
+        title: 'Still Life 1',
         year: 2024,
-        medium: 'Acrylic on paper',
-        dimensions: '80 × 60 cm',
+        medium: 'Oil on canvas',
+        dimensions: '9 × 12 inch',
+        description: 'Part of an ongoing series investigating texture and layering.',
+        status: 'Sold'
+    },
+
+    {
+        image: 'painting4.jpg',
+        title: 'Port Angeles',
+        year: 2025,
+        medium: 'Oil on board',
+        dimensions: '9 × 12 inch',
+        description: 'Part of an ongoing series investigating texture and layering.',
+        status: 'Sold'
+    },
+    {
+        image: 'painting5.jpg',
+        title: 'Thetis',
+        year: 2024,
+        medium: 'Acrylic on canvas',
+        dimensions: '12 × 12 inch',
+        description: 'Part of an ongoing series investigating texture and layering.',
+        status: 'Sold'
+    },
+    
+    {
+        image: 'study1.jpg',
+        title: 'Study for Landslide Lake',
+        year: 2026,
+        medium: 'Oil on paper',
+        dimensions: '6 × 8 inch',
         description: 'Part of an ongoing series investigating texture and layering.',
         status: 'Sold'
     }
@@ -150,7 +189,7 @@ function openLightbox(index) {
     `;
 
     lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox open
+    document.body.style.overflow = 'hidden';
 }
 
 function closeLightbox() {
