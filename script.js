@@ -33,7 +33,7 @@ const artworks = [
         title: 'Still Life 1',
         year: 2024,
         medium: 'Oil on canvas',
-        dimensions: '9 × 12 inch',
+        dimensions: '9 × 11 inch',
         // description: 'Part of an ongoing series investigating texture and layering.',
         // status: 'Sold'
     },
@@ -43,7 +43,7 @@ const artworks = [
         title: 'Port Angeles',
         year: 2025,
         medium: 'Oil on board',
-        dimensions: '9 × 12 inch',
+        dimensions: '11 × 14 inch',
         // description: 'Part of an ongoing series investigating texture and layering.',
         // status: 'Sold'
     },
