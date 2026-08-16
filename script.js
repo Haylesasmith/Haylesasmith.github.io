@@ -15,8 +15,8 @@ const artworks = [
         year: 2025,
         medium: 'Oil on board',
         dimensions: '9 × 11 inch',
-        description: 'A meditation on colour and form exploring the relationship between positive and negative space.',
-        status: 'Available'
+        // description: 'A meditation on colour and form exploring the relationship between positive and negative space.',
+        // status: 'Available'
     },
     {
         image: 'painting2.jpg',
@@ -24,8 +24,8 @@ const artworks = [
         year: 2025,
         medium: 'Oil on panel',
         dimensions: '6 × 8 inch',
-        description: 'Part of an ongoing series investigating texture and layering.',
-        status: 'Sold'
+        // description: 'Part of an ongoing series investigating texture and layering.',
+        // status: 'Sold'
     },
 
     {
@@ -34,8 +34,8 @@ const artworks = [
         year: 2024,
         medium: 'Oil on canvas',
         dimensions: '9 × 12 inch',
-        description: 'Part of an ongoing series investigating texture and layering.',
-        status: 'Sold'
+        // description: 'Part of an ongoing series investigating texture and layering.',
+        // status: 'Sold'
     },
 
     {
@@ -44,8 +44,8 @@ const artworks = [
         year: 2025,
         medium: 'Oil on board',
         dimensions: '9 × 12 inch',
-        description: 'Part of an ongoing series investigating texture and layering.',
-        status: 'Sold'
+        // description: 'Part of an ongoing series investigating texture and layering.',
+        // status: 'Sold'
     },
     {
         image: 'painting5.jpg',
@@ -53,8 +53,8 @@ const artworks = [
         year: 2024,
         medium: 'Acrylic on canvas',
         dimensions: '12 × 12 inch',
-        description: 'Part of an ongoing series investigating texture and layering.',
-        status: 'Sold'
+        // description: 'Part of an ongoing series investigating texture and layering.',
+        // status: 'Sold'
     },
     
     {
@@ -63,8 +63,8 @@ const artworks = [
         year: 2026,
         medium: 'Oil on paper',
         dimensions: '6 × 8 inch',
-        description: 'Part of an ongoing series investigating texture and layering.',
-        status: 'Sold'
+        // description: 'Part of an ongoing series investigating texture and layering.',
+        // status: 'Sold'
     }
     // ,{
     //     image: 'painting1.jpg',
