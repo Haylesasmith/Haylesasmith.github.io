@@ -184,8 +184,6 @@ function openLightbox(index) {
         <p><strong>Year:</strong> ${artwork.year}</p>
         <p><strong>Medium:</strong> ${artwork.medium}</p>
         <p><strong>Dimensions:</strong> ${artwork.dimensions}</p>
-        <p>${artwork.description}</p>
-        <p><strong>Status:</strong> ${artwork.status}</p>
     `;
 
     lightbox.classList.add('active');
